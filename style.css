@@ -1,0 +1,29 @@
+body {
+    margin: o;
+    padding: 0;
+    font-family: monospace;
+    background: linear-gradient(180deg, #57C73C, #091406);
+    height: 100vh;
+}
+.caja_inicio_sesion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 5px;
+}
+.caja_inicio_sesion h1{
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+.caja_inicio_sesion h3{
+    text-align: left;
+    padding: 0 0 1px 0;
+}
+.caja_inicio_sesion form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
