@@ -6,6 +6,7 @@ body {
     height: 100vh;
 }
 .caja_inicio_sesion{
+    padding: 1%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -35,6 +36,7 @@ background: #57C73C;
 border-radius: 25px;
 border: 1px solid;
 cursor: pointer;
+margin: 2%;
 }
 #Usuario{
     width: 100%;
