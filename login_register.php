@@ -14,7 +14,7 @@ if(isset($_POST['registrar'])) {
         $_SESSION['register_error'] = 'Usuario ya esta registrado';
         $_SESSION['active_form'] = 'register' ;
     } else{
-        $conn->("INSERT INTO users (name, username, password, role) VALUES ('$name', '$username', '$password', '$role')");
+        $conn->query("INSERT INTO users (name, username, password, role) VALUES ('$name', '$username', '$password', '$role')");
     }
 
     header("Location : admin.php");
