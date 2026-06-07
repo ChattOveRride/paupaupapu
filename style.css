@@ -4,8 +4,9 @@ body {
     font-family: monospace;
     background: linear-gradient(180deg, #57C73C, #091406);
     height: 100vh;
-    
-}
+    font-family: 'Times New Roman', Times, serif;
+    color: #3B3B3B;
+}   
 .caja_inicio_sesion{
     position: absolute;
     top: 50%;
