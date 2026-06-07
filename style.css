@@ -4,16 +4,16 @@ body {
     font-family: monospace;
     background: linear-gradient(180deg, #57C73C, #091406);
     height: 100vh;
+    
 }
 .caja_inicio_sesion{
-    padding: 1%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
     background: white;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 .caja_inicio_sesion h1{
     text-align: center;
@@ -29,24 +29,36 @@ body {
 }
 
 #botonchido{
-width: 100%;
-height: 50px;
-color: white;
-background: #57C73C;
-border-radius: 25px;
-border: 1px solid;
-cursor: pointer;
-margin: 2%;
+    width: 70%;
+    height: 50px;
+    color: white;
+    background: #57C73C;
+    border-radius: 25px;
+    border: 1px solid;
+    cursor: pointer;
+    margin-bottom: 20px;
+    
 }
 #Usuario{
     width: 100%;
-    padding: 5px 5px;
-    height: 20px;
+    padding: 5px 5px 5px 5px;
+    height: 30px;
     font-size: 20px;
+    border-radius: 15px;
+    background: #BFBFBF;
+    border: none;
+    outline: none;
+    
 }
 #Pass{
+    margin-bottom: 20px;
     width: 100%;
-    padding: 5px 5px;
-    height: 20px;
+    padding: 5px 5px 5px 5px;
+    height: 30px;
     font-size: 20px;
+    border-radius: 15px;
+    background: #BFBFBF;
+    border: none;
+    outline: none;
+
 }
