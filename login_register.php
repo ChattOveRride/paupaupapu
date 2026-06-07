@@ -1,0 +1,50 @@
+<?php
+
+session_start();
+require_once 'config.php';
+
+if(isset($_POST['registrar'])) {
+    $name = $_POST['Nombre'];
+    $username = $_POST['Usuario'];
+    $password = passeord_hash($_POST['Password'], PASSWORD_DEFAULT);
+    $role = $_POST['rol'];
+
+    $checkUser = $conn->query("SELECT username FROM users WHERE username = '$username'");
+    if ($checkUser->num_rows > 0) {
+        $_SESSION['register_error'] = 'Usuario ya esta registrado';
+        $_SESSION['active_form'] = 'register' ;
+    } else{
+        $conn->("INSERT INTO users (name, username, password, role) VALUES ('$name', '$username', '$password', '$role')");
+    }
+
+    header("Location : admin.php");
+    exit();
+}
+
+if (isset($_POST["login"])) {
+    $username = $_POST['Usuario'];
+    $password = $_POST['Password'];
+
+    $result = $conn->query("SELECT * FROM users WHERE username = '$username'");
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['username'] = $user['username'];
+
+            if ($user['rol'] === 'admin') {
+                header('Location: admin.php');
+            }
+            else {
+                header("Location: user.php");
+            }
+
+            exit();
+        }
+    }
+    $_SESSION['login_error'] = 'Informacion incorrecta';
+    $_SESSION['active_form'] = 'login' ;
+    header("Location : index.php");
+    exit();
+}
+?>
