@@ -11,7 +11,7 @@ $activeForm = $_SESSION['active_form'] ?? 'login';
 
 session_unset();
 
-function showError($){
+function showError($error){
     return !empty($error)? "<p class='error-message'>$error</p>": '';
 }
 
@@ -29,6 +29,7 @@ function isActiveForm($formName, $activeForm) {
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <a href="admin.php">admin</a>
         <div class="caja_inicio_sesion">
             <h1>Login</h1>
            <form method="post" action="login_register.php">

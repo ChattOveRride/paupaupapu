@@ -11,7 +11,7 @@ $activeForm = $_SESSION['active_form'] ?? 'login';
 
 session_unset();
 
-function showError($){
+function showError($error){
     return !empty($error)? "<p class='error-message'>$error</p>": '';
 }
 
