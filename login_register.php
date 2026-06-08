@@ -6,7 +6,8 @@ require_once 'config.php';
 if(isset($_POST['registrar'])) {
     $name = $_POST['Nombre'];
     $username = $_POST['Usuario'];
-    $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+    $password = $_POST['Password'];
+    //$password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
     $role = $_POST['rol'];
 
     $checkUser = $conn->query("SELECT username FROM users WHERE username = '$username'");
