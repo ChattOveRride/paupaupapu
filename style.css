@@ -5,24 +5,28 @@ body {
     background: linear-gradient(180deg, #57C73C, #091406);
     height: 100vh;
     font-family: 'Times New Roman', Times, serif;
-    color: #3B3B3B;
+    color: black;
 }   
 .caja_inicio_sesion{
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 30%;
     background: white;
     border-radius: 15px;
 }
 .caja_inicio_sesion h1{
     text-align: center;
-    padding: 0 0 10px 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 .caja_inicio_sesion h3{
     text-align: left;
-    padding: 0 0 1px 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 5px;
 }
 .caja_inicio_sesion form{
     padding: 0 40px;
@@ -38,28 +42,49 @@ body {
     border: 1px solid;
     cursor: pointer;
     margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 #Usuario{
     width: 100%;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 15px;
+     margin-bottom: 7px;
     height: 30px;
     font-size: 20px;
     border-radius: 15px;
     background: #BFBFBF;
     border: none;
     outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 #Pass{
     margin-bottom: 20px;
     width: 100%;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 15px;
     height: 30px;
     font-size: 20px;
     border-radius: 15px;
     background: #BFBFBF;
     border: none;
     outline: none;
-
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#Nombre{
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 5px 5px 5px 15px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    background: #BFBFBF;
+    border: none;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.botones{
+    display: flex;
+    align-items: center;
+    object-position: center;
+    justify-content: center;
 }

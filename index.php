@@ -26,21 +26,24 @@ function isActiveForm($formName, $activeForm) {
     <head>
         <meta charset="utf-8">
         <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <a href="admin.php">admin</a>
         <div class="caja_inicio_sesion">
-            <h1>Login</h1>
            <form method="post" action="login_register.php">
             <?= showError($errors['login']); ?>
+             <h1>Login</h1>
             <h3>Nombre</h3>
 		        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" required>
              <h3>Usuario</h3>
 		        <input type="text" id="Usuario" name="Usuario" placeholder="Usuario" required>
             <h3>Contraseña</h3>
                 <input type="password" autocomplete="" id="Pass" name="Password" placeholder="Contraseña" required>
-                <button id="botonchido" type="submit" name="login">Iniciar</button>
+                <div class="botones">
+                    <button id="botonchido" type="submit" name="login">Iniciar</button>
+                </div>
             </form>
         </div>
     </body>
