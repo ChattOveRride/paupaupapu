@@ -9,7 +9,7 @@
         <h3>Eres un Admin</h3>
                 <div class="caja_inicio_sesion">
             <h1>Registrar</h1>
-           <form method="post" action="">
+           <form method="post" action="login_register.php">
             <h3>Nombre</h3>
 		        <input type="text" id="Nombre" name="Nombre" placeholder="Nombre" required>
              <h3>Usuario</h3>
