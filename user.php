@@ -1,3 +1,13 @@
+<?php 
+
+session_start();
+
+if (!isset($_SESSION['username'])){
+	header("Location: index.php");
+	exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -5,6 +15,10 @@
         <title>Usuario</title>
     </head>
     <body>
-        <h3>Eres un Usuario lol</h3>
+        <div class="box">
+			<h1>Bienvenido,<span><?= $_SESSION['name']; ?></span>! :D</h1>
+			<p>Eres un <b>Usuario</b> lol</p>
+			<button onclick="window.location.href='logout.php'">Cerrar Sesion</button>
+		</div>
     </body>
 </html>

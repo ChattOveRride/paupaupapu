@@ -35,7 +35,7 @@ function isActiveForm($formName, $activeForm) {
     </head>
     <body>
         <div class="box">
-			<h1>Bienvenido, <span><?= $_SESSION['name'];?></span>! :D</h1>
+			<h1>Bienvenido,<span><?= $_SESSION['name']; ?></span>! :D</h1>
 			<p>Eres un <b>ADMIN</b></p>
 			<button onclick="window.location.href='logout.php'">Cerrar Sesion</button>
 		</div>

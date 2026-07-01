@@ -6,19 +6,19 @@ require_once 'config.php';
 if(isset($_POST['registrar'])) {
     $name = $_POST['Nombre'];
     $username = $_POST['Usuario'];
-    $password = $_POST['Password'];
-    //$password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
+   
+    $password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
     $role = $_POST['rol'];
 
     $checkUser = $conn->query("SELECT username FROM users WHERE username = '$username'");
     if ($checkUser->num_rows > 0) {
         $_SESSION['register_error'] = 'Usuario ya esta registrado';
-        $_SESSION['active_form'] = 'register' ;
+        $_SESSION['active_form'] = 'registrar';
     } else{
         $conn->query("INSERT INTO users (name, username, password, role) VALUES ('$name', '$username', '$password', '$role')");
     }
 
-    header("Location : admin.php");
+    header("Location: admin.php");
     exit();
 }
 
@@ -33,8 +33,8 @@ if (isset($_POST["login"])) {
             $_SESSION['name'] = $user['name'];
             $_SESSION['username'] = $user['username'];
 
-            if ($user['rol'] === 'admin') {
-                header('Location: admin.php');
+            if ($user['role'] === 'admin') {
+                header("Location: admin.php");
             }
             else {
                 header("Location: user.php");
@@ -45,7 +45,7 @@ if (isset($_POST["login"])) {
     }
     $_SESSION['login_error'] = 'Informacion incorrecta';
     $_SESSION['active_form'] = 'login' ;
-    header("Location : index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
