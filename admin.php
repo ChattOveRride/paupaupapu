@@ -2,6 +2,11 @@
 
 session_start();
 
+if (!isset($_SESSION['username'])){
+	header("Location: index.php");
+	exit();
+}
+
 $errors = [
     'login' => $_SESSION['login_error'] ?? '',
     'register' => $_SESSION['register_error'] ?? '',
@@ -29,7 +34,11 @@ function isActiveForm($formName, $activeForm) {
         <title>Admin</title>
     </head>
     <body>
-        <h3>Eres un Admin</h3>
+        <div class="box">
+			<h1>Bienvenido, <span><?= $_SESSION['name'];?></span>! :D</h1>
+			<p>Eres un <b>ADMIN</b></p>
+			<button onclick="window.location.href='logout.php'">Cerrar Sesion</button>
+		</div>
                 <div class="caja_inicio_sesion">
             <h1>Registrar</h1>
            <form method="post" action="login_register.php">
