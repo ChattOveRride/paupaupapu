@@ -6,7 +6,7 @@ require_once 'config.php';
 if(isset($_POST['registrar'])) {
     $name = $_POST['Nombre'];
     $username = $_POST['Usuario'];
-    $password = $_POST['password'];
+    $password = $_POST['Password'];
     //$password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
     $role = $_POST['rol'];
 
